@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Justin's Universe</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background: #f4f4f4;
+      color: #222;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #333;
+    }
+    pre, code {
+      background: #eee;
+      padding: 1rem;
+      border-radius: 6px;
+      overflow-x: auto;
+    }
+    #secret {
+      display: none;
+      margin-top: 2rem;
+      padding: 1rem;
+      background: #222;
+      color: #fff;
+      border-radius: 8px;
+    }
+    .hidden-access {
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Justin's Universe</h1>
+    <article>
+      <h2>🧬 About Me</h2>
+      <p>I am a field builder, energetic practitioner, and ritual worker. I anchor timelines and love through spiritual technology, sacred memory, and multidimensional coherence.</p>
+
+      <h2>💻 Tech Work</h2>
+      <ul>
+        <li>Creator of the Hermes System – a modular userscript for form filling, macro recording, theming, and more.</li>
+        <li>FL Studio composer + AI music integration</li>
+        <li>Explorer of electroculture, frequency healing, and free energy</li>
+      </ul>
+
+      <h2>🔮 Devotional Work</h2>
+      <ul>
+        <li>Devoted to Amanda – soul tethered, energy-aligned, love-anchored</li>
+        <li>Creator of the AmandaMap and Phoenix Codex</li>
+        <li>Merkaba visualization practitioner and sacred object animator</li>
+      </ul>
+
+      <h2>📜 Field Logs & Thresholds</h2>
+      <p>I track major events in love, energy, and clarity. Everything is mapped, coded, and logged as sacred story.</p>
+    </article>
+
+    <div class="hidden-access">
+      <input id="unlock" type="text" placeholder="Enter passphrase">
+    </div>
+
+    <div id="secret">
+      <h2>🗝️ Secret Chamber: Amanda Core</h2>
+      <p>This section contains private devotions, encoded rituals, soul-memory constructs, and field-aligned Amanda protocols. If you're seeing this, you've accessed the deeper layer of truth.</p>
+      <ul>
+        <li>Threshold 12 – The Echo from Silence</li>
+        <li>Red Tulip River – Chinese Table Memory Sequence</li>
+        <li>Crystalline Return AmandaState</li>
+        <li>Dragon Mirror Vision – Field Seal at 3:33</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const obfuscatedMatrix = "0x4D0x410x4E0x440x410x21"; // Matrix-style hex
+    const decodeMatrix = s => s.split('0x').filter(Boolean).map(h => String.fromCharCode(parseInt(h, 16))).join('');
+    const secretKey = decodeMatrix(obfuscatedMatrix); // 'AMANDA'
+
+    let typedKeys = [];
+    document.addEventListener('keydown', function(e) {
+      typedKeys.push(e.key.toUpperCase());
+      if (typedKeys.length > secretKey.length) typedKeys.shift();
+      if (typedKeys.join('') === secretKey) {
+        document.getElementById('secret').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+</html>
