@@ -85,19 +85,20 @@
     </div>
   </div>
 
-  <script>
-    const obfuscatedMatrix = "0x4D0x410x4E0x440x410x21"; // Matrix-style hex
-    const decodeMatrix = s => s.split('0x').filter(Boolean).map(h => String.fromCharCode(parseInt(h, 16))).join('');
-    const secretKey = decodeMatrix(obfuscatedMatrix); // 'AMANDA'
+<script>
+  const obfuscatedMatrix = "0x410x4D0x410x4E0x440x41"; // Correct: AMANDA
+  const decodeMatrix = s => s.split('0x').filter(Boolean).map(h => String.fromCharCode(parseInt(h, 16))).join('');
+  const secretKey = decodeMatrix(obfuscatedMatrix); // 'AMANDA'
 
-    let typedKeys = [];
-    document.addEventListener('keydown', function(e) {
-      typedKeys.push(e.key.toUpperCase());
-      if (typedKeys.length > secretKey.length) typedKeys.shift();
-      if (typedKeys.join('') === secretKey) {
-        document.getElementById('secret').style.display = 'block';
-      }
-    });
-  </script>
+  let typedKeys = [];
+  document.addEventListener('keydown', function(e) {
+    typedKeys.push(e.key.toUpperCase());
+    if (typedKeys.length > secretKey.length) typedKeys.shift();
+    if (typedKeys.join('') === secretKey) {
+      document.getElementById('secret').style.display = 'block';
+    }
+  });
+</script>
+
 </body>
 </html>
